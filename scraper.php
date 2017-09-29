@@ -4,7 +4,7 @@
 
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-for($page = 7; $page $page <9; $page++)
+for($page = 7; $page <9; $page++)
 {
   echo $page;
 }
