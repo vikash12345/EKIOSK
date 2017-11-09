@@ -23,6 +23,11 @@ for($page = 119489; $page <248998; $page++)
  scraperwiki::save(array('link','caseno','parties','advocate','caseinst','html_encoded'), $record);
   
   }
+    else{
+       $record = array( 'link' =>$LINK, 'caseno' => "N/A" ,'parties' => "N/A" ,'advocate' => "N/A",'caseinst' => "N/A" , 'html_encoded' => "N/A");
+  
+ scraperwiki::save(array('link','caseno','parties','advocate','caseinst','html_encoded'), $record);
+    }
   }
   
 }
