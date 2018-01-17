@@ -11,7 +11,8 @@ for($page = 7; $page <9; $page++)
   $LINK               =     'http://202.61.43.37:8082/ekioskv2/(S(kq4pwh3tumdqjfrn2fckn3ch))/CaseProfile.aspx?1='.$page;
   echo  "$LINK\n";
   $html               =     file_get_html($LINK);
-  if($html){
+  if($html)
+  {
   $caseno             =     $html->find("//*[@id='lbl_caseno']",0)->plaintext;
   $parties            =     $html->find("//*[@id='lbl_parties']",0)->plaintext;
   $advocate           =     $html->find("//*[@id='lbl_advo_p1']",0)->plaintext;
@@ -25,11 +26,7 @@ for($page = 7; $page <9; $page++)
  scraperwiki::save(array('link','caseno','parties','advocate','caseinst','html_encoded'), $record);
   
   }
-    else{
-       $record = array( 'link' =>$LINK, 'caseno' => "N/A" ,'parties' => "N/A" ,'advocate' => "N/A",'caseinst' => "N/A" , 'html_encoded' => "N/A");
-  
- scraperwiki::save(array('link','caseno','parties','advocate','caseinst','html_encoded'), $record);
-    }
+
   }
   
 }
