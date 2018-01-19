@@ -17,13 +17,13 @@ for($page = 7; $page <9; $page++)
   $parties            =     $html->find("//*[@id='lbl_parties']",0)->plaintext;
   $advocate           =     $html->find("//*[@id='lbl_advo_p1']",0)->plaintext;
   $caseinst           =     $html->find("//*[@id='lbl_case_institution_date']",0)->plaintext;
-  $html_encoded 			= html_entity_decode($html);
+  
   
   if($caseno  != "")
   {
-  $record = array( 'link' =>$LINK, 'caseno' => $caseno ,'parties' => $parties ,'advocate' => $advocate,'caseinst' => $caseinst , 'html_encoded' => $html_encoded);
+  $record = array( 'link' =>$LINK, 'caseno' => $caseno ,'parties' => $parties ,'advocate' => $advocate,'caseinst' => $caseinst);
   
- scraperwiki::save(array('link','caseno','parties','advocate','caseinst','html_encoded'), $record);
+ scraperwiki::save(array('link','caseno','parties','advocate','caseinst'), $record);
   
   }
 
