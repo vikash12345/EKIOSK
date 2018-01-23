@@ -10,7 +10,9 @@ for($page = 7; $page <248998; $page++)
  
   $LINK               =     'http://202.61.43.37:8082/ekioskv2/(S(kq4pwh3tumdqjfrn2fckn3ch))/CaseProfile.aspx?1='.$page;
   echo  "$LINK\n";
+ sleep(3);
   $html               =     file_get_html($LINK);
+ sleep(5);
   if($html)
   {
   $caseno             =     $html->find("//*[@id='lbl_caseno']",0)->plaintext;
