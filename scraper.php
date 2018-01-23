@@ -18,14 +18,10 @@ for($page = 7; $page <248998; $page++)
   $advocate           =     $html->find("//*[@id='lbl_advo_p1']",0)->plaintext;
   $caseinst           =     $html->find("//*[@id='lbl_case_institution_date']",0)->plaintext;
   
-  
-  if($caseno  != "")
-  {
+
   $record = array( 'link' =>$LINK, 'caseno' => $caseno ,'parties' => $parties ,'advocate' => $advocate,'caseinst' => $caseinst);
-  
- scraperwiki::save(array('link','caseno','parties','advocate','caseinst'), $record);
-  
-  }
+   scraperwiki::save(array('link','caseno','parties','advocate','caseinst'), $record);
+
 
   }
   
