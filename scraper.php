@@ -5,7 +5,7 @@
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 //248998
-for($page = 86332; $page <248998; $page++)
+for($page = 93775; $page <248998; $page++)
 {
  
   $LINK               =     'http://202.61.43.37:8082/ekioskv2/(S(kq4pwh3tumdqjfrn2fckn3ch))/CaseProfile.aspx?1='.$page;
